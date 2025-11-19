@@ -17,7 +17,5 @@ locals {
     application            = coalesce(lookup(local.lower_tags, "application", ""), "TF_NA")
     application_repository = coalesce(lookup(local.lower_tags, "application_repository", ""), "TF_NA")
     iac_repository         = coalesce(lookup(local.lower_tags, "iac_repository", ""), "TF_NA")
-    KmsCustom              = var.tags["KmsCustom"]
-    EnableBackup           = var.tags["EnableBackup"]
   })
 }
